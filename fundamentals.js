@@ -9,6 +9,7 @@ const aCar = {
              Model : ' Corolla ',
              CC : ' 1.8'
 },
+features : ['Parking assist', 'Alarm', 'Tow-bar'],
     registration : {
         Year : '201',
         County : 'WD',
@@ -22,6 +23,18 @@ const aCar = {
     exteriorColour : 'red',
     interiorFabric : {texture: 'leather', shade: 'cream'}
   }
+
+  for (let i = 0 ; i < aCar.features.length ; i += 1) {
+    console.log(aCar.features[i]) ;
+}
+
+for (let i = 0 ; i < aCar.previous_owners.length ; i += 1) {
+    console.log(aCar.previous_owners[i].name) ;
+}
+
+for (let p in aCar.type)  {
+    console.log(p.toUpperCase() + ' = ' + aCar.type[p] ) ;
+}
   
   console.log(aCar.owner + ' drives a ' + aCar.type.make)
   console.log(' Reg. = ' + aCar.registration.Year + aCar.registration.County + aCar.registration.Number)
